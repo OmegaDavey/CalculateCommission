@@ -11,7 +11,7 @@ function calculateCommissionFunction(lockQty, stockQty, barrelQty) {
     const maxBarrels = 90;
 
     // Calculate total sales
-    const totalSales = lockQty * lockCost + stockQty * stockCost + barrelQty * barrelCost;
+    const totalSales = (lockQty * lockCost) + (stockQty * stockCost) + (barrelQty * barrelCost);
 
     // Check if sales exceed any limits
     if (lockQty > maxLocks || stockQty > maxStocks || barrelQty > maxBarrels || lockQty < 1 || stockQty < 1 || barrelQty < 1) {
